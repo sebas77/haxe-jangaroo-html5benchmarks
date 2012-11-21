@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- metadata, make sure 'package' is at least 2 segments (ie. com.myproject) -->
+	<app path="export" file="shootemup" title="ShootEmUp" main="ShootEmUp" package="com.example.myapp" 
+		version="1.0.0" company="" />
+		
+	<!-- output -->
+	<window width="960" height="600" orientation="" resizable="true" />
+	<!-- path is better <set name="BUILD_DIR" value="bin" /> -->
+	
+	<!-- classpath, haxe libs -->
+	<!-- obslete <classpath name="src" />-->
+	<source path="src" />
+	<haxelib name="nme" />
+			
+	<!-- assets -->
+	<icon name="assets/nme.svg" />
+	<assets path="assets" include="*" exclude="nme.svg" />
+	
+	<!-- DLLs -->
+	<ndll name="std" />
+	<ndll name="nme" haxelib="nme" />
+	
+	<compilerflag name="--dead-code-elimination" />
+	<!-- Windows app: hide console -->
+	<!--<setenv name="no_console" value="1" />-->
+</project>
